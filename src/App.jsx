@@ -10,6 +10,7 @@ import Progress from "./components/Progress";
 import FinishScreen from "./components/FinishScreen";
 import Footer from "./components/Footer";
 import Timer from "./components/Timer";
+import questionsData from "../data/questions.json";
 import { useEffect, useReducer } from 'react';
 
 const SECS_PER_QUESTION = 30
@@ -95,7 +96,7 @@ function App() {
   )
 
   useEffect(function () {
-  dispatch({ type: "dataReceived", payload: Question });
+  dispatch({ type: "dataReceived", payload: questionsData });
 }, []);
 
   return (
