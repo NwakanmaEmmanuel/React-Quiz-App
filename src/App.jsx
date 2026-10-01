@@ -96,7 +96,7 @@ function App() {
   )
 
   useEffect(function () {
-  dispatch({ type: "dataReceived", payload: questionsData });
+  dispatch({ type: "dataReceived", payload: questionsData.questions });
 }, []);
 
   return (
